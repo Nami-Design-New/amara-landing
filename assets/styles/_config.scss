@@ -1,0 +1,115 @@
+@font-face {
+  font-family: "montserrat";
+  src: url("../webfonts/ArbFONTS-Montserrat-Arabic-Regular.ttf");
+}
+
+@mixin centerFlex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin space-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin centerAbsolute {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin clearInput {
+  border: none;
+  background: none;
+  outline: none;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  line-height: 1.5;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "montserrat", sans-serif;
+  transition: scroll 0.3s ease-in-out;
+  -webkit-tap-highlight-color: transparent;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+input {
+  border: none;
+  background-color: unset;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #989898;
+  border-radius: 30px;
+}
+
+:target {
+  scroll-margin-top: 120px;
+}
+
+input[type="number"] {
+  &::-webkit-outer-spin-button {
+    display: none;
+  }
+  &::-webkit-inner-spin-button {
+    display: none;
+  }
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+$main: #fd6b22;
+$dark: #222020;
+$white: #fff;
+$gray: #777777;
+$text: #666b88;
+$border: #dddddd;
+$inputBg: #f8f8f8;
+$inputHint: #aaaaaa;
+$lightGray: #eeeeee;
+$inputStroke: #f2f2f2;
+$transition: 0.3s ease-in-out;
+$shadow: 0px 2px 8px #0000001a;
+
+.dropdown-toggle:active {
+  background: $white !important;
+  border-color: $main !important;
+}
+
+a,
+button {
+  transition: $transition;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
